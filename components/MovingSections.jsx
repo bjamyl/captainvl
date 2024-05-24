@@ -13,7 +13,7 @@ const MovingSections = () => {
   const [lettersRef, setLettersRef] = useArrayRef();
   const triggerRef = useRef();
 
-  const {  setIsActive } = useNavBarChange();
+  const { setIsActive } = useNavBarChange();
 
   function useArrayRef() {
     const lettersRef = useRef([]);
@@ -42,10 +42,10 @@ const MovingSections = () => {
   }, []);
 
   const logos = [
-    { id: 1, logo: "Digital Journal" },
-    { id: 2, logo: "Real Estate Today" },
-    { id: 3, logo: "Benzinga" },
-    { id: 4, logo: "Nexus" },
+    { id: 1, logo: "Digital Journal", imgDir: "logos/jornal.png" },
+    { id: 2, logo: "Real Estate Today", imgDir: "logos/realestate.png" },
+    { id: 3, logo: "Benzinga", imgDir: "logos/benz.png" },
+    { id: 4, logo: "Nexus", imgDir: "logos/nexus.png" },
   ];
   return (
     <section
@@ -70,11 +70,9 @@ const MovingSections = () => {
             and transparency in all our business dealings. We are committed to
             fair pricing and never compromise on the quality of our services.
           </p>
-          <div className="flex gap-x-4 mt-10">
+          <div className="grid grid-cols-2 md:gap-x-10 xl:grid-cols-4 mt-10 gap-y-10 xl:gap-y-0  items-top ">
             {logos.map((logo, i) => (
-              <p key={i} className="font-medium text-xl lg:text-3xl">
-                {logo.logo}
-              </p>
+              <img key={i} src={logo.imgDir} alt="logo" className="h-[20px] md:h-8 object-cover" />
             ))}
           </div>
         </div>

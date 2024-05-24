@@ -34,16 +34,12 @@ const Hero = () => {
           { autoAlpha: 0, y: 70, duration: 0.6 },
           "-=0.40"
         )
-        .from(
-          lettersRef.current,
-          {
-            autoAlpha: 0,
-            opacity: 0,
-            stagger: 0.01,
-            duration: 0.1,
-          },
-          "-=0.5"
-        )
+        .from(lettersRef.current, {
+          autoAlpha: 0,
+          opacity: 0,
+          stagger: 0.01,
+          duration: 0.1,
+        },"-=0.5")
         .from(play.current, { autoAlpha: 0, y: -70, duration: 0.6 }, "-=0.4")
         .from(
           herocard.current,

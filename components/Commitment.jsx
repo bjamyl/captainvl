@@ -30,14 +30,13 @@ const Commitment = () => {
           start: "top center",
           end: "bottom 80%",
           scrub: true,
-          markers: true,
+          markers: false,
         },
         opacity: 0.2,
         stagger: 0.1,
         onStart: () => setIsActive(true),
         onReverseComplete: () => setIsActive(false),
       });
-      
     });
 
     console.log(isActive);
@@ -52,7 +51,7 @@ const Commitment = () => {
       <div>
         <div className="md:grid md:grid-cols-4">
           <h2 ref={textRef} className="text-sm mb-2 ">
-            {isActive ? " Our services" : "Inactive"}
+            Our services
           </h2>
           <p className="text-3xl font-medium md:text-4xl lg:text-5xl md:col-span-3 2xl:col-span-2 ">
             {text.split("").map((letter, index) => (
