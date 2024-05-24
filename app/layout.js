@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { NavbarProvider } from "@/context/NavbarChange";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +40,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={PPNeueMontreal.className}>
-        <NavbarProvider>{children}</NavbarProvider>
+        <SmoothScroll>
+          <NavbarProvider>{children}</NavbarProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
