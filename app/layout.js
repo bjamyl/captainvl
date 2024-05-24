@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import Header from "@/components/Header";
 import "./globals.css";
+import { NavbarProvider } from "@/context/NavbarChange";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,8 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={PPNeueMontreal.className}>
-        <Header />
-        {children}
+        <NavbarProvider>{children}</NavbarProvider>
       </body>
     </html>
   );

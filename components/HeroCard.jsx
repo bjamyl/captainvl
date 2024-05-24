@@ -1,3 +1,5 @@
+"use client"
+
 const HeroCard = () => {
   return (
     <div className=" border pt-5 pl-5 pb-[77px] rounded-tr-[180px] w-[354px]">
